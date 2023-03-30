@@ -1,0 +1,33 @@
+--Create a florist's shop database
+
+CREATE TABLE florist's shop (id INTEGER PRIMARY KEY, flower TEXT, colour text, aisel INTEGER, price INTEGER);
+
+INSERT INTO store VALUES (1, "rose", "red", 1, 7);
+INSERT INTO store VALUES (2, "rose", "pink", 1, 6);
+INSERT INTO store VALUES (3, "rose", "white", 2, 9);
+INSERT INTO store VALUES (4, "tulip", "yellow", 7, 5);
+INSERT INTO store VALUES (5, "tulip", "purple", 5, 5.5);
+INSERT INTO store VALUES (6, "peony", "pink", 12, 11);
+INSERT INTO store VALUES (7, "peony", "yellow", 10, 12);
+INSERT INTO store VALUES (8, "hyacinth", "white", 3, 7);
+INSERT INTO store VALUES (9, "hyacinth", "blue", 4, 7.5);
+INSERT INTO store VALUES (10, "peruvian lily", "pink", 8, 9);
+INSERT INTO store VALUES (11, "peruvian lily", "orange", 9, 9.5);
+INSERT INTO store VALUES (12, "pink", "pink", 13, 5);
+INSERT INTO store VALUES (13, "gerbera", "orange", 11,6);
+INSERT INTO store VALUES (14, "gerbera", "yelow", 11, 6);
+
+--display the database ordered by price. 
+SELECT * FROM florist's shop
+ORDER BY price desc; 
+
+--what is the avg price of roses? 
+SELECT AVG(price) "avg price of roses"
+FROM florist's shop
+where flower='rose'; 
+
+--what are the most 5 expensive flowers? 
+SELECT flower, price
+FROM florist's shop
+order by price desc
+limit 5; 
