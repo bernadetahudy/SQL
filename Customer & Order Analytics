@@ -27,7 +27,7 @@ AND orderid <> 'Order ID'
 SELECT
 distinct Product, price
 FROM BIT_DB.JanSales
-WHERE price IN (SELECT min(price) FROM BIT_DB.JanSales);
+WHERE price IN (SELECT min(price) FROM BIT_DB.JanSales)
 
 --OR
 SELECT
@@ -40,7 +40,7 @@ LIMIT 1
 SELECT
 Product, sum(quantity)*price as revenue
 FROM BIT_DB.JanSales
-GROUP BY Product;
+GROUP BY Product
 
 # 6. Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
 SELECT
