@@ -95,3 +95,4 @@ CASE WHEN AVG(safetyrating) OVER (PARTITION BY safetyrating) >=4 THEN "Leave As-
     ELSE "Improvements Needed"
     END AS "Recommendation" 
 FROM Citybikelanes
+
