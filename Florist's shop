@@ -1,4 +1,4 @@
---Create a florist's shop database
+#Create a florist's shop database
 
 CREATE TABLE florist's shop (id INTEGER PRIMARY KEY, flower TEXT, colour text, aisel INTEGER, price INTEGER);
 
@@ -17,17 +17,19 @@ INSERT INTO florist's shop VALUES (12, "pink", "pink", 13, 5);
 INSERT INTO florist's shop VALUES (13, "gerbera", "orange", 11,6);
 INSERT INTO florist's shop VALUES (14, "gerbera", "yelow", 11, 6);
 
---display the database ordered by price. 
+# Display the database ordered by price. 
 SELECT * FROM florist's shop
-ORDER BY price desc; 
+ORDER BY price desc
 
---what is the avg price of roses? 
-SELECT AVG(price) "avg price of roses"
+# What is the avg price of roses? 
+SELECT
+AVG(price) "avg price of roses"
 FROM florist's shop
-where flower='rose'; 
+WHERE flower='rose'
 
---what are the most 5 expensive flowers? 
-SELECT flower, price
+# What are the most 5 expensive flowers? 
+SELECT
+flower, price
 FROM florist's shop
-order by price desc
-limit 5; 
+ORDER BY price desc
+LIMIT 5
